@@ -17,7 +17,11 @@ describe('Calculator.vue', () => {
   });
   it('can subtract one number from another');
   it('can multiply two numbers');
-  
+  it('can divide a number into another');
+  it('can concatenate multiple number button clicks');
+  it('can chain multiple operations together');
+  it('can clear the running total without affecting the calculation');
+
 })
 
 
