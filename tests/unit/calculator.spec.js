@@ -12,6 +12,11 @@ describe('App.vue', () => {
 })
 
 describe('Calculator.vue', () => {
+  it('can add two numbers', () =>{
+
+  });
+  it('can subtract one number from another');
+  it('can multiply two numbers');
   
 })
 
