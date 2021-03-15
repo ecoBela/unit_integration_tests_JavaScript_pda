@@ -10,3 +10,12 @@ describe('App.vue', () => {
     expect(wrapper.vm.runningTotal).to.equal(9)
   })
 })
+
+describe('Calculator.vue', () => {
+  
+})
+
+
+
+
+
