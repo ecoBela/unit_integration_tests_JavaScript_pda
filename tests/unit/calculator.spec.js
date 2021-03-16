@@ -30,7 +30,12 @@ describe('App.vue', () => {
     wrapper.vm.multiply('5');
     expect(wrapper.vm.runningTotal).to.equal(15)
   });
-  xit('can divide a number into another');
+  it('can divide a number into another', () => {
+    const wrapper = shallowMount(App)
+    wrapper.vm.previousTotal = 21
+    wrapper.vm.divide('7');
+    expect(wrapper.vm.runningTotal).to.equal(3)
+  });
   xit('can concatenate multiple number button clicks');
   xit('can chain multiple operations together');
   xit('can clear the running total without affecting the calculation');
