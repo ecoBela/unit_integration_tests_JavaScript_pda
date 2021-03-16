@@ -36,8 +36,27 @@ describe('App.vue', () => {
     wrapper.vm.divide('7');
     expect(wrapper.vm.runningTotal).to.equal(3)
   });
-  xit('can concatenate multiple number button clicks');
-  xit('can chain multiple operations together');
+  it('can concatenate multiple number button clicks', () =>{
+    const wrapper = shallowMount(App)
+    wrapper.vm.numberClick('5')
+    wrapper.vm.operatorClick('+')
+    wrapper.vm.numberClick('2')
+    wrapper.vm.operatorClick('=')
+    expect(wrapper.vm.runningTotal).to.equal(7)
+  });
+  xit('can chain multiple operations together', () =>{
+    const wrapper = shallowMount(App)
+    wrapper.vm.numberClick('2')
+    wrapper.vm.operatorClick('+')
+    wrapper.vm.numberClick('3')
+    wrapper.vm.operatorClick('*')
+    wrapper.vm.numberClick('3')
+    expect(wrapper.vm.runningTotal).to.equal(15)
+
+
+    
+
+  });
   xit('can clear the running total without affecting the calculation');
 
 })
