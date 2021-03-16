@@ -59,7 +59,17 @@ describe('App.vue', () => {
     expect(wrapper.vm.runningTotal).to.equal(15)
 
   });
-  xit('can clear the running total without affecting the calculation');
+  it('can clear the running total without affecting the calculation', () => {
+    const wrapper = shallowMount(App)
+    wrapper.vm.numberClick('5')
+    wrapper.vm.operatorClick('+')
+    wrapper.vm.numberClick('2')
+    wrapper.vm.clearClick()
+    wrapper.vm.operatorClick('+')
+    wrapper.vm.numberClick('3')
+    wrapper.vm.operatorClick('=')
+    expect(wrapper.vm.runningTotal).to.equal(8)
+  });
 
 })
 
