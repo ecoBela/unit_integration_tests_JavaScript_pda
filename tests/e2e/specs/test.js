@@ -34,7 +34,20 @@ describe('calculator', () => {
     cy.get('.display').should('contain', '20')
   });
 
-  xit('should give expected output for range of numbers e.g. negative, decimals');
+  it('should give expected output for range of numbers ', () =>{
+    cy.get('#number1').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
+    cy.get('#operator_divide').click();
+    cy.get('#number3').click()
+    // cy.get('#operator_multiply').click();
+    // cy.get('#number2').click();
+    cy.get('#operator_equals').click();
+    cy.get('.display').should('contain', '3333.33')
+
+  });
   xit('should do XXXXXX in THIS exceptional circumstance');
 
 
