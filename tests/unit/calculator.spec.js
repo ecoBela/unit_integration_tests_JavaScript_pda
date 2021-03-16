@@ -17,8 +17,13 @@ describe('App.vue', () => {
     expect(wrapper.vm.runningTotal).to.equal(5)      
   });
 
-  xit('can subtract one number from another');
-  
+  it('can subtract one number from another', () =>{
+    const wrapper = shallowMount(App)
+    wrapper.vm.previousTotal = 7
+    wrapper.vm.subtract('4');
+    expect(wrapper.vm.runningTotal).to.equal(3)
+  });
+
   xit('can multiply two numbers');
   xit('can divide a number into another');
   xit('can concatenate multiple number button clicks');
